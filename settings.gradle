@@ -1,0 +1,3 @@
+rootProject.name='MVPDemo'
+include ':demo'
+include ':fastmvp'
