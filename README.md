@@ -1,5 +1,30 @@
 # FastMvp
 
+## Import
+
+If you use `JCenter`, add this code in your gradle file.
+
+```gradle
+dependencies {
+    implementation 'dog.abcd:fastmvp:1.0.0'
+}
+```
+
+Also you can use `jitpack.io`, you need add this code in your gradle file.
+
+```gradle
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+dependencies {
+        implementation 'com.github.michaellee123:FastMvp:1.0.0'
+}
+```
+
 ## How To Use
 
 1. Create your `IBaseView` like this:
