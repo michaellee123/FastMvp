@@ -42,9 +42,8 @@ interface IFastMVP<K : IFastView, T : FastPresenter<K>> {
     // 使用反射技术得到T的真实类型
     private fun getRealType(): Class<*> {
         // 获取当前new的对象的泛型的父类类型
-        var pt: ParameterizedType? = null
         val genericSuperclass: Type = this.javaClass.genericSuperclass!! as ParameterizedType
-        pt = genericSuperclass as ParameterizedType
+        val pt = genericSuperclass as ParameterizedType
         // 获取第二个类型参数的真实类型
         return pt.actualTypeArguments[1] as Class<*>
     }

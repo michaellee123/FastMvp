@@ -1,6 +1,10 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.michaellee123'
+
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 29
@@ -43,4 +47,14 @@ dependencies {
 
     // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-common-java8
     implementation group: 'androidx.lifecycle', name: 'lifecycle-common-java8', version: '2.2.0'
+}
+
+publish {
+    userOrg = 'antichristm'//Organizations名
+    repoName = 'android'//Repository名
+    groupId = 'dog.abcd'//包名（不要项目名）
+    artifactId = 'fastmvp'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'A simple MVP lib, easy change your MVC project to MVP'//描述，不重要
+    website = 'https://github.com/michaellee123/FastMvp'//网站
 }
